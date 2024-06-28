@@ -1,0 +1,347 @@
+
+@font-face {
+    font-family: 'croc';
+    src: url('font/Croc-f364.woff2') format('woff2'),
+         url('font/Croc-27a9.woff') format('woff'),
+         url('font/Croc-vmpKO.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0;
+    background-color: #1a2a4d;
+}
+
+header {
+    background-color: #000000;
+    padding: 1em 0;
+}
+
+nav.fixed-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    background: transparent;
+    display: flex;
+    justify-content: space-between; /* Ajoute de l'espace entre les éléments */
+    padding: 10px 20px;
+    z-index: 1000; /* Assurez-vous que le menu est au-dessus des autres éléments */
+    width: 100%;
+}
+
+nav.fixed-menu .logo {
+    height: 230px; /* Ajuste la taille selon vos besoins */
+}
+
+nav.fixed-menu ul {
+    list-style-type: none; /* Supprimer les puces de la liste */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Affiche les éléments en ligne */
+}
+
+nav.fixed-menu ul li {
+    display: inline;
+    margin-right: 100px;
+    margin-left: 40px; /* Augmente la marge entre les éléments */
+    margin-top: 40px; /* Marge supérieure personnalisée */
+}
+
+nav.fixed-menu ul li a {
+    color: #dc9d50;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'croc', sans-serif;
+    transition: color 0.3s;
+}
+
+nav.fixed-menu ul li a:hover {
+    color: #dc9d50c9;
+}
+
+nav ul {
+    list-style-type: none; /* Supprimer les puces de la liste */
+    padding: 0;
+    margin: 20px; /* Supprimer les marges par défaut de la liste */
+}
+
+header.parallax {
+    background-image: url('picture/etienne-lehuede-IUBQKMEU9yg-unsplash.jpg'); /* Assurez-vous que le chemin est correct */
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Section Styles */
+section.entrees {
+    background-color: #1f6a74; /* Bleu */
+    padding: 20px;
+    font-family: 'croc', sans-serif;
+    color: white;
+}
+
+section.plats {
+    background-color: #7ac2bd; /* Vert */
+    padding: 20px;
+    font-family: 'croc', sans-serif;
+    color: white;
+    position: relative;
+}
+
+section.desserts {
+    position: relative; /* Assure que le parent a une position définie */
+    background-color: #f1b02e; /* Jaune */
+    padding: 20px;
+    font-family: 'croc', sans-serif;
+    color: white;
+    text-align: center; /* Centre le contenu horizontalement */
+}
+
+section.japan {
+    position: relative; /* Assure que le parent a une position définie */
+    background-color: #f1b02e; /* Jaune */
+    padding: 20px;
+    font-family: 'croc', sans-serif;
+    color: white;
+    text-align: center; /* Centre le contenu horizontalement */
+
+    /* Styles spécifiques pour la section "japan" */
+    display: flex; /* Utilisez flexbox pour aligner les éléments */
+    align-items: flex-start; /* Alignement des éléments sur le côté supérieur */
+    justify-content: flex-start; /* Justification à gauche */
+
+    /* Ajustez la largeur de la section selon vos besoins */
+    width: 100%;
+}
+
+/* Full Width Image */
+.full-width-image {
+    height: 600px; /* Ajustez la hauteur selon vos besoins */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.full-width-image.first {
+    background-image: url('picture/aleksei-zaitcev-qMrXnZyabas-unsplash-min.jpg'); /* Chemin correct de l'image */
+}
+
+.full-width-image.second {
+    background-image: url('picture/nicki-eliza-schinow-BjJP2TN8WoI-unsplash-min.jpg'); /* Chemin correct de la deuxième image */
+}
+
+footer {
+    background-color: #dc9d50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: 'croc', sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #dc9d50;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #dc9d50ca;
+}
+
+.photo {
+    display: block; /* Assure que l'image est un élément de type block */
+    transition: opacity 1.5s ease-in-out; /* Transition pour le fondu */
+}
+
+.photo.first {
+    width: 100%; /* Ajuste la taille selon vos besoins */
+    max-width: 600px; /* Limite la taille maximale */
+    height: auto; /* Garde les proportions */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre */
+    margin: 20px 180px; /* Ajoute de la marge autour de l'image */
+    opacity: 0;
+}
+
+.photo.second {
+    width: 100%; /* Ajuste la taille selon vos besoins */
+    max-width: 400px; /* Limite la taille maximale */
+    height: 200px; /* Garde les proportions */
+    margin: 0 auto; /* Ajoute de la marge autour de l'image */
+    opacity: 0; /* Initialement, l'image est transparente */
+}
+
+/* Quand l'image devient visible, appliquez l'opacité complète */
+.photo.visible {
+    opacity: 1;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+    height: 600px; /* Ajustez la hauteur selon vos besoins */
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Transition plus douce */
+}
+
+.mySlides.show {
+    display: block;
+    opacity: 1;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Fading animation */
+.mySlides.show {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* Image styles */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image pour couvrir entièrement le conteneur */
+}
+
+.superposed-image {
+    position: absolute;
+    top: 200px; /* Ajustez la position verticale en fonction de vos besoins */
+    left: 25% ; 
+    transform: translateX(-50%); /* Centrage horizontal précis */
+    z-index: 2; /* Assure que l'image est au-dessus du carrousel */
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Garde les proportions */
+}
+
+/* Styles pour le carousel dans la section "japan" */
+.carousel-container-japan {
+    width: 60%; /* Largeur du carousel */
+    margin-right: 20px; /* Marge à droite du carousel */
+    position: relative;
+    max-width: 100%; /* Largeur maximale du carousel */
+    overflow: hidden; /* Cache les parties des images qui dépassent */
+}
+
+.mySlides-japan {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.mySlides-japan.show {
+    display: block;
+    opacity: 1;
+}
+
+.mySlides-japan img {
+    width: 100%; /* Assure que l'image occupe la largeur du conteneur */
+    height: auto; /* Garde les proportions */
+    object-fit: cover; /* Ajuste l'image pour couvrir complètement le conteneur */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+.text-container-japan {
+    flex: 1; /* Pour que le texte occupe tout l'espace restant */
+    padding: 20px; /* Ajustez le padding du texte selon vos besoins */
+    font-family: 'croc', sans-serif;
+    color: #333; /* Couleur du texte */
+}
+
+/* Animation du carousel */
+@keyframes fade-japan {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.mySlides-japan.show {
+    animation-name: fade-japan;
+    animation-duration: 1.5s;
+}
+
+/* Carousel page*/
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* ajustez la largeur selon vos besoins */
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* pour s'assurer que les images remplissent complètement le conteneur */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
