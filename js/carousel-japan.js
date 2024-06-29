@@ -1,18 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const slidesJapan = document.querySelectorAll('mySlides-japan');
-    console.log(slidesJapan)
-    let currentIndexJapan = 0;
+let slideJapanIndex = 0;
+showSlidesJapan();
 
-    function showSlidesJapan() {
-        if (slidesJapan.length === 0) return; // Si aucune slide n'est trouvée, sortir de la fonction
-        slidesJapan.forEach(slide => slide.classList.remove('show'));
-        currentIndexJapan++;
-        if (currentIndexJapan > slidesJapan.length) {
-            currentIndexJapan = 1;
-        }
-        slidesJapan[currentIndexJapan - 1].classList.add('show');
-        setTimeout(showSlidesJapan, 3000); // Change image every 3 seconds
+function showSlidesJapan() {
+    let slidesJapan = document.getElementsByClassName("mySlides-japan");
+    for (let i = 0; i < slidesJapan.length; i++) {
+        slidesJapan[i].classList.remove("show");
     }
-
-    showSlidesJapan();
-});
+    slideJapanIndex++;
+    if (slideJapanIndex > slidesJapan.length) {
+        slideJapanIndex = 1;
+    }
+    slidesJapan[slideJapanIndex - 1].classList.add("show");
+    setTimeout(showSlidesJapan, 3000); // Change image every 3 seconds
+}

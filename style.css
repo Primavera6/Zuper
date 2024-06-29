@@ -113,21 +113,14 @@ section.desserts {
     text-align: center; /* Centre le contenu horizontalement */
 }
 
+
 section.japan {
-    position: relative; /* Assure que le parent a une position définie */
-    background-color: #f1b02e; /* Jaune */
+    background-color: #f1b02e; /* Vert */
     padding: 20px;
     font-family: 'croc', sans-serif;
     color: white;
-    text-align: center; /* Centre le contenu horizontalement */
-
-    /* Styles spécifiques pour la section "japan" */
-    display: flex; /* Utilisez flexbox pour aligner les éléments */
-    align-items: flex-start; /* Alignement des éléments sur le côté supérieur */
-    justify-content: flex-start; /* Justification à gauche */
-
-    /* Ajustez la largeur de la section selon vos besoins */
-    width: 100%;
+    position: relative;
+    height: 800px;
 }
 
 /* Full Width Image */
@@ -292,17 +285,6 @@ img {
     padding: 20px; /* Ajustez le padding du texte selon vos besoins */
     font-family: 'croc', sans-serif;
     color: #333; /* Couleur du texte */
-}
-
-/* Animation du carousel */
-@keyframes fade-japan {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-}
-
-.mySlides-japan.show {
-    animation-name: fade-japan;
-    animation-duration: 1.5s;
 }
 
 /* Carousel page*/
